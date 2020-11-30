@@ -1,0 +1,22 @@
+{
+  "name": "bot-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot-tracker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delta-official/Bot-Tracker.git"
+  },
+  "author": "Darkuss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Delta-official/Bot-Tracker/issues"
+  },
+  "homepage": "https://github.com/Delta-official/Bot-Tracker#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
