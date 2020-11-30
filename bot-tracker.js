@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const KBot_ID = ""
+const KBot_ID = "782340321383940147"
 const kServer_ID = "777175140647174154"
 
 const client = new Discord.Client()
