@@ -22,3 +22,5 @@ client.on("presenceUpdate", (oldPresence, newPresence) => {
         }
     }
 });
+
+client.login(process.env.token)
