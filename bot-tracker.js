@@ -9,18 +9,30 @@ client.on("ready", () => {
 })
 
 client.on("presenceUpdate", (oldPresence, newPresence) => {
-    if(newPresence.user.id === KBot_ID) {
-        if(newPresence.server.id === kServer_ID) {
-            if (oldPresence.status !== newPresence.status) {
-                if(newPresence.status === "online") {
-                    client.guild.channels.id.get("782960870337544212").send("<@508632222245322793> Bot is online!")
-                }
-                if(newPresence.status === "offline") {
-                    client.guild.channels.id.get("782960870337544212").send("<@508632222245322793> Bot is offline")
-                }
-            }
+    if(newPresence.user.id === kBot_ID) {
+        console.log("Check 2 passed")
+    if(newPresence.guild.id === kServer_ID) {
+        console.log("Check 3 passed")
+        if (newPresence.status) {
+            newPresence.status.forEach(activity => {
+        if (activity.status === "ONLINE") {
+            console.log(`K-bot is ${kBot_ID.newPresence.status}!`)
+            botOnline()
+        } else if(activity.status === "OFFLINE") {
+            console.log(`K-bot is ${kBot_ID.newPresence.status}!`)
+            botOffline()
         }
-    }
+    });
+   }
+}
+}
 });
+
+function botOnline() {
+    client.guild.channels.id.get("782960870337544212").send("<@508632222245322793> Bot is online!")
+}
+function botOffline() {
+    client.guild.channels.id.get("782960870337544212").send("<@508632222245322793> Bot is offline")
+}
 
 client.login(process.env.token)
