@@ -10,10 +10,11 @@ client.on("ready", () => {
 })
 
 client.on("presenceUpdate", (oldPresence, newPresence) => {
+    console.log("dupa 1")
     if(newPresence.user.id === kBot_ID) {
-        console.log("Check 2 passed")
+        console.log("dupa 2")
     if(newPresence.guild.id === kServer_ID) {
-        console.log("Check 3 passed")
+        console.log("dupa 3")
         if (newPresence.status === "online") {
             console.log(`K-bot is ${kBot_ID.newPresence.status}!`)
             botOnline()
