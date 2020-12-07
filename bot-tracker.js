@@ -27,10 +27,10 @@ client.on("presenceUpdate", (oldPresence, newPresence) => {
 });
 
 function botOnline() {
-    client.guild.channels.id.get(kLog_Channel_ID).send("<@508632222245322793> Bot is online!")
+    client.channels.cache.get(kLog_Channel_ID).send("<@508632222245322793> Bot is online!")
 }
 function botOffline() {
-    client.guild.channels.id.get(kLog_Channel_ID).send("<@508632222245322793> Bot is offline")
+    client.channels.cache.get(kLog_Channel_ID).send("<@508632222245322793> Bot is offline")
 }
 
 client.login(process.env.token)
